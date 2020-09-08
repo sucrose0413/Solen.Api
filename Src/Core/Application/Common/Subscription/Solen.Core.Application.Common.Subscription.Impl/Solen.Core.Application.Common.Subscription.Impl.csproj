@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Domain\Solen.Core.Domain\Solen.Core.Domain.csproj" />
+    <ProjectReference Include="..\..\Security\Solen.Core.Application.Common.Security\Solen.Core.Application.Common.Security.csproj" />
+    <ProjectReference Include="..\Solen.Core.Application.Common.Subscription\Solen.Core.Application.Common.Subscription.csproj" />
+  </ItemGroup>
+
+</Project>

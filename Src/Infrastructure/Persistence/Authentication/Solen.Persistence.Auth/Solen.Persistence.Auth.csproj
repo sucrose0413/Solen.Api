@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Core\Application\Authentication\Solen.Core.Application.Auth.Services\Solen.Core.Application.Auth.Services.csproj" />
+      <ProjectReference Include="..\..\Common\Solen.Persistence\Solen.Persistence.csproj" />
+    </ItemGroup>
+
+</Project>

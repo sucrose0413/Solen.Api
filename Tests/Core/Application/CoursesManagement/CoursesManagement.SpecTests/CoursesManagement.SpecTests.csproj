@@ -1,0 +1,96 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+
+        <IsPackable>false</IsPackable>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" Version="3.1.7" />
+        <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+        <PackageReference Include="nunit" Version="3.12.0" />
+        <PackageReference Include="NUnit3TestAdapter" Version="3.17.0" />
+        <PackageReference Include="SpecFlow" Version="3.4.3" />
+        <PackageReference Include="SpecFlow.NUnit" Version="3.4.3" />
+        <PackageReference Include="SpecFlow.Tools.MsBuild.Generation" Version="3.4.3" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="specflow.json">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <SpecFlowFeatureFiles Update="Courses\Commands\CreateCourse\CreateCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\DeleteCourse\DeleteCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\DraftCourse\DraftCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\PublishCourse\PublishCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\UnpublishCourse\UnpublishCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\UpdateCourse\UpdateCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Commands\UpdateModulesOrders\UpdateModulesOrders.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="LearningPaths\Commands\UpdateCourseLearningPaths\UpdateCourseLearningPaths.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Lectures\Commands\CreateLecture\CreateLecture.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Lectures\Commands\DeleteLecture\DeleteLecture.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Lectures\Commands\UpdateLecture\UpdateLecture.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Modules\Commands\CreateModule\CreateModule.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Modules\Commands\DeleteModule\DeleteModule.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Modules\Commands\UpdateModule\UpdateModule.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Modules\Commands\UpdateLecturesOrders\UpdateLecturesOrders.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+      <SpecFlowFeatureFiles Update="Courses\Queries\GetCourse\GetCourse.feature">
+        <CodeBehindFile>%(RelativeDir)%(Filename).feature.cs</CodeBehindFile>
+        <Visible>true</Visible>
+      </SpecFlowFeatureFiles>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Common\Solen.SpecTests\Solen.SpecTests.csproj" />
+    </ItemGroup>
+
+</Project>

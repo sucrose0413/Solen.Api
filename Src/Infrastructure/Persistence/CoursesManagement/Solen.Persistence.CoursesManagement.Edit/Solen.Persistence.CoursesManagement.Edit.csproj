@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Edit.Services\Solen.Core.Application.CoursesManagement.Edit.Services.csproj" />
+    <ProjectReference Include="..\..\Common\Solen.Persistence\Solen.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

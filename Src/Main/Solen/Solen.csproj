@@ -1,0 +1,114 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>netcoreapp3.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="FluentValidation.AspNetCore" Version="9.2.0" />
+        <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="8.1.0" />
+        <PackageReference Include="MicroElements.Swashbuckle.FluentValidation" Version="4.0.0" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="3.1.7">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Serilog.AspNetCore" Version="3.4.0" />
+        <PackageReference Include="Serilog.Enrichers.Environment" Version="2.1.3" />
+        <PackageReference Include="Serilog.Enrichers.Process" Version="2.0.1" />
+        <PackageReference Include="Serilog.Enrichers.Thread" Version="3.1.0" />
+        <PackageReference Include="Serilog.Sinks.Seq" Version="4.0.0" />
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="5.5.1" />
+        <PackageReference Include="Swashbuckle.AspNetCore.Annotations" Version="5.5.1" />
+
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="3.1.7" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" Version="3.1.7" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Folder Include="Resources\Images\" />
+        <Folder Include="Resources\Raw\" />
+        <Folder Include="Resources\Videos\" />
+        <Folder Include="wwwroot\Images\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\Core\Application\Authentication\Solen.Core.Application.Auth.EventsHandlers\Solen.Core.Application.Auth.EventsHandlers.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Authentication\Solen.Core.Application.Auth.Services\Solen.Core.Application.Auth.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Authentication\Solen.Core.Application.Auth\Solen.Core.Application.Auth.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Identity\Solen.Core.Application.Common.Identity\Solen.Core.Application.Common.Identity.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Resources\Solen.Core.Application.Common.Resources.Impl\Solen.Core.Application.Common.Resources.Impl.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Resources\Solen.Core.Application.Common.Resources\Solen.Core.Application.Common.Resources.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Security\Solen.Core.Application.Common.Security\Solen.Core.Application.Common.Security.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Subscription\Solen.Core.Application.Common.Subscription.Impl\Solen.Core.Application.Common.Subscription.Impl.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Common\Subscription\Solen.Core.Application.Common.Subscription\Solen.Core.Application.Common.Subscription.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Common.Impl\Solen.Core.Application.CoursesManagement.Common.Impl.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Common\Solen.Core.Application.CoursesManagement.Common.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Edit.Factories\Solen.Core.Application.CoursesManagement.Edit.Factories.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Edit.Services\Solen.Core.Application.CoursesManagement.Edit.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Edit\Solen.Core.Application.CoursesManagement.Edit.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.EventsHandlers\Solen.Core.Application.CoursesManagement.EventsHandlers.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement.Services\Solen.Core.Application.CoursesManagement.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\CoursesManagement\Solen.Core.Application.CoursesManagement\Solen.Core.Application.CoursesManagement.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Dashboard\Solen.Core.Application.Dashboard.Services\Solen.Core.Application.Dashboard.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Dashboard\Solen.Core.Application.Dashboard\Solen.Core.Application.Dashboard.csproj" />
+      <ProjectReference Include="..\..\Core\Application\LearningPaths\Solen.Core.Application.LearningPaths.Services\Solen.Core.Application.LearningPaths.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\LearningPaths\Solen.Core.Application.LearningPaths\Solen.Core.Application.LearningPaths.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Learning\Solen.Core.Application.Learning.Services\Solen.Core.Application.Learning.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Learning\Solen.Core.Application.Learning\Solen.Core.Application.Learning.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Notifications\Solen.Core.Application.Notifications.Services\Solen.Core.Application.Notifications.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Notifications\Solen.Core.Application.Notifications\Solen.Core.Application.Notifications.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Settings\Notifications\Solen.Core.Application.Settings.Notifications.Services\Solen.Core.Application.Settings.Notifications.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Settings\Notifications\Solen.Core.Application.Settings.Notifications\Solen.Core.Application.Settings.Notifications.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Settings\Organization\Solen.Core.Application.Settings.Organization.Services\Solen.Core.Application.Settings.Organization.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\Settings\Organization\Solen.Core.Application.Settings.Organization\Solen.Core.Application.Settings.Organization.csproj" />
+      <ProjectReference Include="..\..\Core\Application\SigningUp\Solen.Core.Application.SigningUp.EventsHandlers\Solen.Core.Application.SigningUp.EventsHandlers.csproj" />
+      <ProjectReference Include="..\..\Core\Application\SigningUp\Solen.Core.Application.SigningUp.Services\Solen.Core.Application.SigningUp.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\SigningUp\Solen.Core.Application.SigningUp\Solen.Core.Application.SigningUp.csproj" />
+      <ProjectReference Include="..\..\Core\Application\UserProfile\Solen.Core.Application.UserProfile.Services\Solen.Core.Application.UserProfile.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\UserProfile\Solen.Core.Application.UserProfile\Solen.Core.Application.UserProfile.csproj" />
+      <ProjectReference Include="..\..\Core\Application\UsersManagement\Solen.Core.Application.Users.EventsHandlers\Solen.Core.Application.Users.EventsHandlers.csproj" />
+      <ProjectReference Include="..\..\Core\Application\UsersManagement\Solen.Core.Application.Users.Services\Solen.Core.Application.Users.Services.csproj" />
+      <ProjectReference Include="..\..\Core\Application\UsersManagement\Solen.Core.Application.Users\Solen.Core.Application.Users.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\MediatR\Solen.Infrastructure.MediatR\Solen.Infrastructure.MediatR.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Notifications\Solen.Infrastructure.Notifications.Emailing.Pickup\Solen.Infrastructure.Notifications.Emailing.Pickup.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Notifications\Solen.Infrastructure.Notifications.Emailing.SendGrid\Solen.Infrastructure.Notifications.Emailing.SendGrid.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Notifications\Solen.Infrastructure.Notifications.Emailing\Solen.Infrastructure.Notifications.Emailing.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Notifications\Solen.Infrastructure.Notifications.WebSocket\Solen.Infrastructure.Notifications.WebSocket.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Notifications\Solen.Infrastructure.Notifications\Solen.Infrastructure.Notifications.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Resources\Solen.Infrastructure.Resources.CloudinaryStorage\Solen.Infrastructure.Resources.CloudinaryStorage.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Resources\Solen.Infrastructure.Resources.LocalStorage\Solen.Infrastructure.Resources.LocalStorage.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Resources\Solen.Infrastructure.Resources.WorkServices\Solen.Infrastructure.Resources.WorkServices.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Resources\Solen.Infrastructure.Resources\Solen.Infrastructure.Resources.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Infrastructure\Security\Solen.Infrastructure.Security\Solen.Infrastructure.Security.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Authentication\Solen.Persistence.Auth\Solen.Persistence.Auth.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Common\Identity\Solen.Persistence.Common.Identity\Solen.Persistence.Common.Identity.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Common\Notifications\Solen.Persistence.Common.Notifications\Solen.Persistence.Common.Notifications.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Common\Resources\Solen.Persistence.Common.Resources\Solen.Persistence.Common.Resources.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Common\Subscription\Solen.Persistence.Common.Subscription\Solen.Persistence.Common.Subscription.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\CoursesManagement\Solen.Persistence.CoursesManagement.Common\Solen.Persistence.CoursesManagement.Common.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\CoursesManagement\Solen.Persistence.CoursesManagement.Edit\Solen.Persistence.CoursesManagement.Edit.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\CoursesManagement\Solen.Persistence.CoursesManagement.EventsHandlers\Solen.Persistence.CoursesManagement.EventsHandlers.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\CoursesManagement\Solen.Persistence.CoursesManagement\Solen.Persistence.CoursesManagement.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Dashboard\Solen.Persistence.Dashboard\Solen.Persistence.Dashboard.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\LearningPaths\Solen.Persistence.LearningPaths\Solen.Persistence.LearningPaths.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Learning\Solen.Persistence.Learning\Solen.Persistence.Learning.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Notifications\Solen.Persistence.Notifications\Solen.Persistence.Notifications.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Settings\Notifications\Solen.Persistence.Settings.Notifications\Solen.Persistence.Settings.Notifications.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\Settings\Organization\Solen.Persistence.Settings.Organization\Solen.Persistence.Settings.Organization.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\SigningUp\Solen.Persistence.SigningUp\Solen.Persistence.SigningUp.csproj" />
+      <ProjectReference Include="..\..\Infrastructure\Persistence\UsersManagement\Solen.Persistence.Users\Solen.Persistence.Users.csproj" />
+      <ProjectReference Include="..\..\Presentation\Authentication\Solen.WebApi.Auth\Solen.WebApi.Auth.csproj" />
+      <ProjectReference Include="..\..\Presentation\CoursesManagement\Solen.WebApi.CoursesManagement.Edit\Solen.WebApi.CoursesManagement.Edit.csproj" />
+      <ProjectReference Include="..\..\Presentation\CoursesManagement\Solen.WebApi.CoursesManagement\Solen.WebApi.CoursesManagement.csproj" />
+      <ProjectReference Include="..\..\Presentation\Dashboard\Solen.WebApi.Dashboard\Solen.WebApi.Dashboard.csproj" />
+      <ProjectReference Include="..\..\Presentation\LearningPaths\Solen.WebApi.LearningPaths\Solen.WebApi.LearningPaths.csproj" />
+      <ProjectReference Include="..\..\Presentation\Learning\Solen.WebApi.Learning\Solen.WebApi.Learning.csproj" />
+      <ProjectReference Include="..\..\Presentation\Notifications\Solen.WebApi.Notifications\Solen.WebApi.Notifications.csproj" />
+      <ProjectReference Include="..\..\Presentation\Settings\Notifications\Solen.WebApi.Settings.Notifications\Solen.WebApi.Settings.Notifications.csproj" />
+      <ProjectReference Include="..\..\Presentation\Settings\Organization\Solen.WebApi.Settings.Organization\Solen.WebApi.Settings.Organization.csproj" />
+      <ProjectReference Include="..\..\Presentation\SigningUp\Solen.WebApi.SigningUp\Solen.WebApi.SigningUp.csproj" />
+      <ProjectReference Include="..\..\Presentation\UserProfile\Solen.WebApi.UserProfile\Solen.WebApi.UserProfile.csproj" />
+      <ProjectReference Include="..\..\Presentation\UsersManagement\Solen.WebApi.Users\Solen.WebApi.Users.csproj" />
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,13 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\..\Core\Application\Common\Resources\Solen.Core.Application.Common.Resources.Impl\Solen.Core.Application.Common.Resources.Impl.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\Application\Common\Security\Solen.Core.Application.Common.Security\Solen.Core.Application.Common.Security.csproj" />
+    <ProjectReference Include="..\..\..\..\Core\Application\Common\Solen.Core.Application\Solen.Core.Application.csproj" />
+  </ItemGroup>
+
+</Project>

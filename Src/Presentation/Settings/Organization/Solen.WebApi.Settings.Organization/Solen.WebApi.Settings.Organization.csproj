@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.1</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\..\..\..\Core\Application\Settings\Organization\Solen.Core.Application.Settings.Organization\Solen.Core.Application.Settings.Organization.csproj" />
+      <ProjectReference Include="..\..\..\Common\Solen.WebApi\Solen.WebApi.csproj" />
+    </ItemGroup>
+
+</Project>

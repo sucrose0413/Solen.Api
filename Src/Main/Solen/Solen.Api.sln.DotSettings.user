@@ -1,0 +1,19 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=7b37bf12_002D3fda_002D4fe1_002D83f9_002Db5eb6392f98c/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Tests&amp;gt;\&amp;lt;Common&amp;gt;\&amp;lt;Solen.SpecFlowTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\ilias\source\repos\Solen.Api\Src\Main\Solen" Presentation="&amp;lt;Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=80e6331a_002D1506_002D4579_002Db97d_002D043ec8277c82/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="WhenCalled_CreateAndAddNewRefreshTokenToRepo" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;NUnit3x::4AAF802D-6991-4EFD-AEBA-43B5F9545210::.NETCoreApp,Version=v3.1::Auth.UnitTests.Queries.LoginUser.LoginUserQueryHandlerTests.WhenCalled_CreateAndAddNewRefreshTokenToRepo&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=bc2eba7a_002D0413_002D4141_002Da867_002Dbf35e66420f6/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Tests&amp;gt;\&amp;lt;Core&amp;gt;\&amp;lt;Application&amp;gt;\&amp;lt;Authentication&amp;gt;\&amp;lt;SpecTests&amp;gt;\&amp;lt;Auth.SpecTests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\ilias\source\repos\Solen.Api\Src\Main\Solen" Presentation="&amp;lt;Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=e51ba78f_002D1d82_002D45fb_002Db97b_002D3423e34fed03/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" Name="All tests from &amp;lt;Tests&amp;gt;" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;Project Location="C:\Users\ilias\source\repos\Solen.Api\Src\Main\Solen" Presentation="&amp;lt;Tests&amp;gt;" /&gt;&#xD;
+&lt;/SessionState&gt;</s:String>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=1e36e7fc_002Deba5_002D43ee_002D85ca_002Dc4e9c4ec22f3_0023Solen_002ECore_002EApplication_002EDashboard/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/UnloadedProject/UnloadedProjects/=bef22834_002D9a2a_002D4c25_002D8535_002D4ece4e76b760_0023Solen_002ECore_002EApplication_002EDashboard_002EServices/@EntryIndexedValue">True</s:Boolean>
+	
+	</wpf:ResourceDictionary>
