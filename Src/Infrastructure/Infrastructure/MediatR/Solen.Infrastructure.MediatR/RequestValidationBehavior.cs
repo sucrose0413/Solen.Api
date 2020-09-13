@@ -29,9 +29,7 @@ namespace Solen.Infrastructure.MediatR
                 .ToList();
 
             if (failures.Count != 0)
-            {
                 throw new Solen.Core.Application.Exceptions.ValidationException(failures);
-            }
 
             return next();
         }
