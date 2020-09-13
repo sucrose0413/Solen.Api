@@ -1,7 +1,6 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Reflection;
-using FluentValidation;
 using FluentValidation.AspNetCore;
 using MediatR;
 using MediatR.Pipeline;
