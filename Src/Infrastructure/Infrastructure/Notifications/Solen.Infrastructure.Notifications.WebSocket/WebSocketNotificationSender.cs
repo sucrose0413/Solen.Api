@@ -35,6 +35,6 @@ namespace Solen.Infrastructure.Notifications.WebSocket
                 .SendAsync(message.NotificationEvent.Name, message.Subject, message.Body);
         }
 
-        public NotificationType NotificationType => new PushNotification();
+        public NotificationType NotificationType => PushNotification.Instance;
     }
 }

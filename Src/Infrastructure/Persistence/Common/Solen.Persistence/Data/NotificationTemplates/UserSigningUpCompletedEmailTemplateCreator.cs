@@ -9,8 +9,8 @@ namespace Solen.Persistence.Data.NotificationTemplates
     {
         public static NotificationTemplate Create()
         {
-            var template = new NotificationTemplate(new EmailNotification(),
-                new UserSigningUpCompletedEvent(), isSystemNotification: true);
+            var template = new NotificationTemplate(EmailNotification.Instance,
+                UserSigningUpCompletedEvent.Instance, isSystemNotification: true);
 
             template.UpdateTemplateSubject("Welcome to Solen LMS!");
 
@@ -22,7 +22,7 @@ namespace Solen.Persistence.Data.NotificationTemplates
             stringBuilder.Append("<br/>");
             stringBuilder.Append("Enjoy your learning journey !");
             stringBuilder.Append("<br/> <br/>");
-            
+
             template.UpdateTemplateBody(stringBuilder.ToString());
 
             return template;

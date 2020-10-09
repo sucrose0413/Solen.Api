@@ -26,7 +26,7 @@ namespace Solen.Core.Application.Auth.EventsHandlers.PasswordTokenSet
             var recipient = new RecipientContactInfo(@event.User.Id, @event.User.Email);
             var resetPasswordInfo = new ResetPasswordInfo(GetLinkToResetPassword(@event.User.PasswordToken));
 
-            await _notificationHandler.Handle(recipient, new PasswordForgottenEvent(),
+            await _notificationHandler.Handle(recipient, PasswordForgottenEvent.Instance,
                 resetPasswordInfo);
         }
 
