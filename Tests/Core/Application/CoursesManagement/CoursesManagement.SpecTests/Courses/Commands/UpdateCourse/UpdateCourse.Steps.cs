@@ -148,7 +148,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
         public async Task WhenIUpdateAPublishedCourse()
         {
             var course = new Course("course", _instructorId, DateTime.Now);
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             _command = new UpdateCourseCommand {CourseId = course.Id, Title = "course title"};

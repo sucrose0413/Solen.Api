@@ -130,7 +130,7 @@ namespace CoursesManagement.SpecTests.LearningPaths.Commands
         public async Task WhenIUpdateTheLearningPathsOfAPublishedCourse()
         {
             var course = new Course("course", _instructorId, DateTime.Now);
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             var learningPath = new LearningPath("developer", _organizationId);

@@ -24,7 +24,7 @@ namespace Solen.Core.Domain.Courses.Entities
             Title = title;
             CreationDate = creationDate;
             CreatorId = creatorId;
-            CourseStatusName = new DraftStatus().Name;
+            CourseStatusName = DraftStatus.Instance.Name;
         }
 
         #endregion

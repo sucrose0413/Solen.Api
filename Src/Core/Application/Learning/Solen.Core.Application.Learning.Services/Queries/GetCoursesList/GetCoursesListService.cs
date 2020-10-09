@@ -24,7 +24,7 @@ namespace Solen.Core.Application.Learning.Services.Queries
                 coursesQuery.OrderBy = new OrderByLastAccessed().Value;
 
             return await _repo.GetCoursesList(coursesQuery, _currentUserAccessor.UserId,
-                _currentUserAccessor.LearningPathId, new PublishedStatus().Name, token);
+                _currentUserAccessor.LearningPathId, PublishedStatus.Instance.Name, token);
         }
     }
 }

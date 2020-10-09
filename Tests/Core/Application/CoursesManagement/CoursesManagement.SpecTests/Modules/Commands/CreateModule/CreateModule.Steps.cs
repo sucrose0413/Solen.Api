@@ -107,7 +107,7 @@ namespace CoursesManagement.SpecTests.Modules.Commands
         public async Task WhenICreateAModuleWhileTheCourseIsPublished()
         {
             var course = new Course("course", _instructorId, DateTime.Now);
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             _command = new CreateModuleCommand {Name = "Module name", CourseId = course.Id};

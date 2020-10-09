@@ -17,6 +17,6 @@ namespace Solen.Core.Application.CoursesManagement.Common
         public int LectureCount { get; set; }
         public IList<CourseLearnedSkillDto> CourseLearnedSkills { get; set; }
         public bool IsEditable { get; set; }
-        public bool IsPublished => Status == new PublishedStatus().Name;
+        public bool IsPublished => Status == PublishedStatus.Instance.Name;
     }
 }

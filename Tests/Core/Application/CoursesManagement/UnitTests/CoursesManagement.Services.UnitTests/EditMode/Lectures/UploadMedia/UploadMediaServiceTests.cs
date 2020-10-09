@@ -190,7 +190,8 @@ namespace CoursesManagement.Services.UnitTests.EditMode.Lectures
         [Test]
         public void SetMediaUrl_WhenCalled_SetMediaUrl()
         {
-            var media = new Mock<MediaLecture>("title", "moduleId", new Solen.Core.Domain.Courses.Enums.LectureTypes.VideoLecture(), 1);
+            var media = new Mock<MediaLecture>("title", "moduleId",
+                Solen.Core.Domain.Courses.Enums.LectureTypes.VideoLecture.Instance, 1);
 
             _sut.SetMediaUrl(media.Object, "url");
 

@@ -24,7 +24,7 @@ namespace Solen.Core.Application.Dashboard.Services.Queries
 
         public async Task<LastPublishedCourseDto> GetLastPublishedCourse(CancellationToken token)
         {
-            return await _repo.GetLastPublishedCourse(_currentUserAccessor.OrganizationId,  new PublishedStatus().Name, token);
+            return await _repo.GetLastPublishedCourse(_currentUserAccessor.OrganizationId,  PublishedStatus.Instance.Name, token);
         }
 
         public async Task<int> GetCourseCount(CancellationToken token)

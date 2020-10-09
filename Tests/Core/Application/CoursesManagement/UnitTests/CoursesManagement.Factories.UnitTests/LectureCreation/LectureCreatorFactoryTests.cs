@@ -2,8 +2,6 @@
 using NUnit.Framework;
 using Solen.Core.Application.CoursesManagement.Edit.Factories.LectureCreation;
 using Solen.Core.Application.CoursesManagement.Edit.Lectures.Commands;
-using Solen.Core.Domain.Courses.Entities;
-using Solen.Core.Domain.Courses.Enums.LectureTypes;
 using ArticleLecture = Solen.Core.Domain.Courses.Enums.LectureTypes.ArticleLecture;
 using VideoLecture = Solen.Core.Domain.Courses.Enums.LectureTypes.VideoLecture;
 
@@ -35,7 +33,7 @@ namespace CoursesManagement.Factories.UnitTests.LectureCreation
         [Test]
         public void Create_LectureTypeIsArticle_CreateArticleLecture()
         {
-            _command.LectureType = new ArticleLecture().Name;
+            _command.LectureType = ArticleLecture.Instance.Name;
             _sut = new LectureCreatorFactory(new List<ILectureCreator> {new ArticleCreator(), new VideoCreator()});
 
             var result = _sut.Create(_command);
@@ -46,7 +44,7 @@ namespace CoursesManagement.Factories.UnitTests.LectureCreation
         [Test]
         public void Create_LectureTypeIsVideo_CreateVideoLecture()
         {
-            _command.LectureType = new VideoLecture().Name;
+            _command.LectureType = VideoLecture.Instance.Name;
             _sut = new LectureCreatorFactory(new List<ILectureCreator> {new VideoCreator(), new ArticleCreator()});
 
             var result = _sut.Create(_command);

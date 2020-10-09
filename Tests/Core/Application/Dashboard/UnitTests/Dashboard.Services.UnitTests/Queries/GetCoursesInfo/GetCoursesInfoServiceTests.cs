@@ -40,7 +40,7 @@ namespace Dashboard.Services.UnitTests.Queries.GetCoursesInfo
         public void GetLastPublishedCourse_WhenCalled_ReturnLastPublishedCourse()
         {
             var lastPublishedCourse = new LastPublishedCourseDto();
-            _repo.Setup(x => x.GetLastPublishedCourse("organizationId", new PublishedStatus().Name, default))
+            _repo.Setup(x => x.GetLastPublishedCourse("organizationId", PublishedStatus.Instance.Name, default))
                 .ReturnsAsync(lastPublishedCourse);
 
             var result = _sut.GetLastPublishedCourse(default).Result;
