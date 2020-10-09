@@ -34,7 +34,7 @@ namespace Solen.Core.Application.Learning.Services.Queries
 
         public int GetOrderByDefaultValue()
         {
-            return new OrderByLastAccessed().Value;
+            return OrderByLastAccessed.Instance.Value;
         }
     }
 }

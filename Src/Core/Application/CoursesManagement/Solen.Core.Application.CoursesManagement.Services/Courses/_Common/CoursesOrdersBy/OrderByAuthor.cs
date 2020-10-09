@@ -2,6 +2,7 @@
 {
     public class OrderByAuthor : CourseOrderBy
     {
+        public static readonly OrderByAuthor Instance = new OrderByAuthor();
         public OrderByAuthor() : base(1, "Author")
         {
         }

@@ -35,7 +35,7 @@ namespace Application.Learning.Services.UnitTests.Queries.GetCoursesList
 
             _sut.GetCoursesList(query, default).Wait();
 
-            Assert.That(query.OrderBy, Is.EqualTo(new OrderByLastAccessed().Value));
+            Assert.That(query.OrderBy, Is.EqualTo(OrderByLastAccessed.Instance.Value));
         }
 
         [Test]

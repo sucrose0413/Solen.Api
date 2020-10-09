@@ -19,7 +19,7 @@ namespace Solen.Core.Application.CoursesManagement.Services.Courses
         public async Task<CoursesListResult> GetCoursesList(GetCoursesListQuery query, CancellationToken token)
         {
             if (query.OrderBy == 0)
-                query.OrderBy = new OrderByCreationDateDesc().Value;
+                query.OrderBy = OrderByCreationDateDesc.Instance.Value;
 
             return await _repo.GetCoursesList(query, _currentUserAccessor.OrganizationId, token);
         }

@@ -2,6 +2,7 @@
 {
     public class OrderByLastAccessed : CourseOrderBy
     {
+        public static readonly OrderByLastAccessed Instance = new OrderByLastAccessed();
         public OrderByLastAccessed() : base(1, "Last Accessed")
         {
         }
