@@ -20,7 +20,7 @@ namespace Solen.Core.Application.CoursesManagement.Common.Impl
             var errors = lectures.Select(x => new CourseErrorDto
             {
                 ModuleId = x.ModuleId, LectureId = x.LectureId,
-                Error = $"Lecture {x.ModuleOrder}.{x.Order}: {new NoContentError().Name}"
+                Error = $"Lecture {x.ModuleOrder}.{x.Order}: {NoContentError.Instance.Name}"
             }).ToList();
 
             return errors;

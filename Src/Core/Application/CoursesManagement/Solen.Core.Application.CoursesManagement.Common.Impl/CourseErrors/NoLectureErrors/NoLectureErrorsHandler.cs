@@ -18,7 +18,7 @@ namespace Solen.Core.Application.CoursesManagement.Common.Impl
         {
             var modules = await _repo.GetModulesWithoutLectures(courseId, token);
             var errors = modules.Select(x => new CourseErrorDto
-                    {ModuleId = x.ModuleId, Error = $"Module {x.Order}: {new NoLectureError().Name}"})
+                    {ModuleId = x.ModuleId, Error = $"Module {x.Order}: {NoLectureError.Instance.Name}"})
                 .ToList();
 
             return errors;
