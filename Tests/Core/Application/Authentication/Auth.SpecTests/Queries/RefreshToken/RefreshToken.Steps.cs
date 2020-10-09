@@ -62,7 +62,7 @@ namespace Auth.SpecTests.Queries
             _factory.CreateOrganization(organization);
 
             var user = new User("user@email.com", organization.Id);
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
             _factory.CreateUser(user);
 
             var refreshTokenEntity = new RefreshTokenEntity(user, DateTime.Now.AddDays(-1));
@@ -79,7 +79,7 @@ namespace Auth.SpecTests.Queries
             _factory.CreateOrganization(organization);
 
             var user = new User("user@email.com", organization.Id);
-            user.ChangeUserStatus(new BlockedStatus());
+            user.ChangeUserStatus(BlockedStatus.Instance);
             _factory.CreateUser(user);
 
             var refreshTokenEntity = new RefreshTokenEntity(user, null);
@@ -102,7 +102,7 @@ namespace Auth.SpecTests.Queries
             _factory.CreateOrganization(organization);
 
             var user = new User("user@email.com", organization.Id);
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
             _factory.CreateUser(user);
 
             var refreshTokenEntity = new RefreshTokenEntity(user, null);

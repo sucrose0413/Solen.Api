@@ -60,7 +60,7 @@ namespace Auth.SpecTests.Queries.GetCurrentLoggedUser
             _factory.CreateOrganization(organization);
 
             var user = new User("email", organization.Id);
-            user.ChangeUserStatus(new BlockedStatus());
+            user.ChangeUserStatus(BlockedStatus.Instance);
             _factory.CreateUser(user);
 
             _client = _factory.GetAuthenticatedClient(user);
@@ -81,7 +81,7 @@ namespace Auth.SpecTests.Queries.GetCurrentLoggedUser
 
             _user = new User("user@email.com", organization.Id);
             _user.UpdateUserName("Jean Dupont");
-            _user.ChangeUserStatus(new ActiveStatus());
+            _user.ChangeUserStatus(ActiveStatus.Instance);
             _factory.CreateUser(_user);
 
             var learningPath = new LearningPath("Developer", organization.Id);

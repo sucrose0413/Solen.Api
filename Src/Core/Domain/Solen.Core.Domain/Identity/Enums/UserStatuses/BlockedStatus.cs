@@ -2,6 +2,7 @@
 {
     public class BlockedStatus : UserStatus
     {
+        public static readonly BlockedStatus Instance = new BlockedStatus();
         public BlockedStatus() : base(3, "Blocked")
         {
         }

@@ -5,7 +5,6 @@ using Solen.Core.Application.Common.Security;
 using Solen.Core.Application.Exceptions;
 using Solen.Core.Application.Users.Commands;
 using Solen.Core.Domain.Identity.Entities;
-using Solen.Core.Domain.Identity.Enums;
 using Solen.Core.Domain.Identity.Enums.UserStatuses;
 
 namespace Solen.Core.Application.Users.Services.Commands
@@ -35,7 +34,7 @@ namespace Solen.Core.Application.Users.Services.Commands
 
         public void BlockUser(User user)
         {
-            user.ChangeUserStatus(new BlockedStatus());
+            user.ChangeUserStatus(BlockedStatus.Instance);
         }
 
         public void UpdateUser(User user)
