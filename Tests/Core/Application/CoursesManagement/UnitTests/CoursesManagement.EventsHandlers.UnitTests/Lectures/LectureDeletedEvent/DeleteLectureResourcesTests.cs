@@ -37,8 +37,8 @@ namespace CoursesManagement.EventsHandlers.UnitTests.Lectures
         {
             var resourcesToDelete = new List<AppResource>
             {
-                new AppResource("resourceId1", "organizationId", "creatorName", new ImageType(), 1),
-                new AppResource("resourceId2", "organizationId", "creatorName", new ImageType(), 1)
+                new AppResource("resourceId1", "organizationId", "creatorName", ImageType.Instance, 1),
+                new AppResource("resourceId2", "organizationId", "creatorName", ImageType.Instance, 1)
             };
 
             _repo.Setup(x => x.GetLectureResources(_event.LectureId, default))

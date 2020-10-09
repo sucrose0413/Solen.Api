@@ -51,8 +51,8 @@ namespace CoursesManagement.EventsHandlers.UnitTests.Modules
         {
             var resourcesToDelete = new List<AppResource>
             {
-                new AppResource("resourceId1", "organizationId", "creatorName", new ImageType(), 1),
-                new AppResource("resourceId2", "organizationId", "creatorName", new ImageType(), 1)
+                new AppResource("resourceId1", "organizationId", "creatorName", ImageType.Instance, 1),
+                new AppResource("resourceId2", "organizationId", "creatorName", ImageType.Instance, 1)
             };
             _repo.Setup(x => x.GetModuleResources(_event.ModuleId, default))
                 .ReturnsAsync(resourcesToDelete);
