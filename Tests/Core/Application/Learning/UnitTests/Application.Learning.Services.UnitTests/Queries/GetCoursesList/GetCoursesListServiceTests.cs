@@ -15,7 +15,7 @@ namespace Application.Learning.Services.UnitTests.Queries.GetCoursesList
         private Mock<ICurrentUserAccessor> _currentUserAccessor;
         private GetCoursesListService _sut;
 
-        private readonly string _publishedStatus = new PublishedStatus().Name;
+        private readonly string _publishedStatus = PublishedStatus.Instance.Name;
 
         [SetUp]
         public void SetUp()

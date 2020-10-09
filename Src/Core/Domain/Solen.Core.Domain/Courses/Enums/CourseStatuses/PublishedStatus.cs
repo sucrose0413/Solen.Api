@@ -2,7 +2,8 @@
 {
     public class PublishedStatus : CourseStatus
     {
-        public PublishedStatus() : base(2, "Published")
+        public static readonly PublishedStatus Instance = new PublishedStatus();
+        private PublishedStatus() : base(2, "Published")
         {
         }
     }

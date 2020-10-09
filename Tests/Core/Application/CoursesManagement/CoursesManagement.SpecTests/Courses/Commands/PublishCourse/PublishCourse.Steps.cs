@@ -173,7 +173,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
 
             var course = await _factory.GetCourseById(_command.CourseId);
 
-            Assert.That(course.CourseStatus.Name, Is.EqualTo(new PublishedStatus().Name));
+            Assert.That(course.CourseStatus.Name, Is.EqualTo(PublishedStatus.Instance.Name));
         }
         
         [When(@"I publish the course")]

@@ -101,7 +101,7 @@ namespace CoursesManagement.SpecTests.Modules.Commands
         public async Task WhenIUpdateLecturesOrdersOfAPublishedCourse()
         {
             var course = new Course("course", _instructorId, DateTime.Now);
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             var module = new Module("module", course.Id, 1);

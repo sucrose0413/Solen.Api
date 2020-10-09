@@ -2,7 +2,8 @@
 {
     public class DraftStatus : CourseStatus
     {
-        public DraftStatus() : base(1, "Draft")
+        public static readonly DraftStatus Instance = new DraftStatus();
+        private DraftStatus() : base(1, "Draft")
         {
         }
     }

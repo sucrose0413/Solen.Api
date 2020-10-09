@@ -2,10 +2,12 @@
 {
     public class VideoLecture : LectureType
     {
-        public VideoLecture() : base(2, "Video")
+        public static readonly VideoLecture Instance = new VideoLecture();
+        
+        private VideoLecture() : base(2, "Video")
         {
         }
-
+        
         public override bool IsMediaLecture => true;
     }
 }
