@@ -18,7 +18,7 @@ namespace Solen.Core.Application.CoursesManagement.Common.Impl
             var courseErrors = new List<CourseErrorDto>();
 
             if (!await _repo.DoesCourseHaveModules(courseId, token))
-                courseErrors.Add(new CourseErrorDto {Error = new NoModuleError().Name});
+                courseErrors.Add(new CourseErrorDto {Error = NoModuleError.Instance.Name});
 
             return courseErrors;
         }
