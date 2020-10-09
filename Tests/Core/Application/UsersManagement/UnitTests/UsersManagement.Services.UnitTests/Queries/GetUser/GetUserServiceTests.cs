@@ -116,7 +116,7 @@ namespace UsersManagement.Services.UnitTests.Queries.GetUser
         [Test]
         public void GetUser_TheUserDoesExistAndBlocked_IsBlockedShouldBeTrue()
         {
-            _userToReturn.ChangeUserStatus(new BlockedStatus());
+            _userToReturn.ChangeUserStatus(BlockedStatus.Instance);
 
             var result = _sut.GetUser("userId", default).Result;
 
@@ -126,7 +126,7 @@ namespace UsersManagement.Services.UnitTests.Queries.GetUser
         [Test]
         public void GetUser_TheUserDoesExistAndActive_IsBlockedShouldBeFalse()
         {
-            _userToReturn.ChangeUserStatus(new ActiveStatus());
+            _userToReturn.ChangeUserStatus(ActiveStatus.Instance);
 
             var result = _sut.GetUser("userId", default).Result;
 

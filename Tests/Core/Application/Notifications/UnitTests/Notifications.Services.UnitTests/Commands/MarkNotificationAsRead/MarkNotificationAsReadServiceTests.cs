@@ -22,7 +22,7 @@ namespace Notifications.Services.UnitTests.Commands.MarkNotificationAsRead
         [Test]
         public void GetNotification_WhenCalled_ReturnTheNotification()
         {
-            var notification = new Notification(new CoursePublishedEvent(), "recipient", "subject", "body");
+            var notification = new Notification(CoursePublishedEvent.Instance, "recipient", "subject", "body");
             _repo.Setup(x => x.GetNotificationById("notificationId", default))
                 .ReturnsAsync(notification);
 
@@ -35,7 +35,7 @@ namespace Notifications.Services.UnitTests.Commands.MarkNotificationAsRead
         public void MarkNotificationAsRead_WhenCalled_MarkTheNotificationAsRead()
         {
             var notification =
-                new Mock<Notification>(new CoursePublishedEvent(), "recipient", "subject", "body");
+                new Mock<Notification>(CoursePublishedEvent.Instance, "recipient", "subject", "body");
 
             _sut.MarkNotificationAsRead(notification.Object);
 
@@ -45,7 +45,7 @@ namespace Notifications.Services.UnitTests.Commands.MarkNotificationAsRead
         [Test]
         public void UpdateNotificationRepo_WhenCalled_UpdateNotificationRepo()
         {
-            var notification = new Notification(new CoursePublishedEvent(), "recipient", "subject", "body");
+            var notification = new Notification(CoursePublishedEvent.Instance, "recipient", "subject", "body");
 
              _sut.UpdateNotificationRepo(notification);
 

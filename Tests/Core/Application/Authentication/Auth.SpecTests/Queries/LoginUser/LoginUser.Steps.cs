@@ -95,7 +95,7 @@ namespace Auth.SpecTests.Queries
             _factory.CreateOrganization(organization);
 
             _user = new User("user@email.com", organization.Id);
-            _user.ChangeUserStatus(new BlockedStatus());
+            _user.ChangeUserStatus(BlockedStatus.Instance);
             _factory.CreateUser(_user, "password");
         }
 
@@ -123,7 +123,7 @@ namespace Auth.SpecTests.Queries
             _factory.AddLearningPath(learningPath);
 
             _user = new User("user@email.com", organization.Id);
-            _user.ChangeUserStatus(new ActiveStatus());
+            _user.ChangeUserStatus(ActiveStatus.Instance);
             _user.UpdateUserName("Jean Dupont");
             _user.UpdateLearningPath(learningPath);
             _user.AddRoleId(UserRoles.Learner);

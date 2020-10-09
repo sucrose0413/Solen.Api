@@ -40,7 +40,7 @@ namespace Solen.Core.Application.CoursesManagement.Services.Courses
 
         public int GetOrderByDefaultValue()
         {
-            return new OrderByCreationDateDesc().Value;
+            return OrderByCreationDateDesc.Instance.Value;
         }
 
         public IList<StatusFilterDto> GetStatus()

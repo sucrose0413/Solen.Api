@@ -9,7 +9,7 @@ namespace Solen.Infrastructure.Resources.LocalStorage
         {
         }
         
-        public override ResourceType ResourceType => new ImageType();
+        public override ResourceType ResourceType => ImageType.Instance;
 
         #region Private Methods
 

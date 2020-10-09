@@ -136,7 +136,7 @@ namespace Auth.SpecTests.Commands
             _factory.CreateOrganization(organization);
             
             _user = new User("user@email.com", organization.Id);
-            _user.ChangeUserStatus(new ActiveStatus());
+            _user.ChangeUserStatus(ActiveStatus.Instance);
             _user.SetPasswordToken(passwordResetToken);
             _factory.CreateUser(_user, "old password");
         }

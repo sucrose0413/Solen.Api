@@ -29,7 +29,7 @@ namespace CoursesManagement.Common.UnitTests
             var result = _sut.GetCourseErrors("courseId", default).Result;
 
             Assert.That(result.Count(p =>
-                p.Error.Contains(new NoLectureError().Name) && p.ModuleId == "moduleId"), Is.EqualTo(1));
+                p.Error.Contains(NoLectureError.Instance.Name) && p.ModuleId == "moduleId"), Is.EqualTo(1));
         }
 
         [Test]
@@ -41,7 +41,7 @@ namespace CoursesManagement.Common.UnitTests
             var result = _sut.GetCourseErrors("courseId", default).Result;
 
             Assert.That(result.Count(p =>
-                p.Error.Contains(new NoLectureError().Name)), Is.EqualTo(0));
+                p.Error.Contains(NoLectureError.Instance.Name)), Is.EqualTo(0));
         }
     }
 }

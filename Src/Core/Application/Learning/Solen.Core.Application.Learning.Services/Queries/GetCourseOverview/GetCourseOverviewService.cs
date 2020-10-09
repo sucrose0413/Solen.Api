@@ -20,7 +20,8 @@ namespace Solen.Core.Application.Learning.Services.Queries
 
         public async Task<LearnerCourseOverviewDto> GetCourseOverview(string courseId, CancellationToken token)
         {
-            return await _repo.GetCourseOverview(courseId, _currentUserAccessor.LearningPathId, new PublishedStatus().Name, token) ??
+            return await _repo.GetCourseOverview(courseId, _currentUserAccessor.LearningPathId,
+                       PublishedStatus.Instance.Name, token) ??
                    throw new NotFoundException($"The course ({courseId}) does not exist");
         }
     }

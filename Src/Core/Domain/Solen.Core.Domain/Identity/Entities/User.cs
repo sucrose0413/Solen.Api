@@ -26,7 +26,7 @@ namespace Solen.Core.Domain.Identity.Entities
             Email = email.ToLower();
             OrganizationId = organizationId;
             CreationDate = DateTime.Now;
-            UserStatusName = new PendingStatus().Name;
+            UserStatusName = PendingStatus.Instance.Name;
         }
 
         #endregion

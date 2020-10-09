@@ -9,8 +9,8 @@ namespace Solen.Persistence.Data.NotificationTemplates
     {
         public static NotificationTemplate Create()
         {
-            var template = new NotificationTemplate(new EmailNotification(),
-                new OrganizationSigningUpInitializedEvent(), isSystemNotification: true);
+            var template = new NotificationTemplate(EmailNotification.Instance,
+                OrganizationSigningUpInitializedEvent.Instance, isSystemNotification: true);
 
             template.UpdateTemplateSubject("Verify your email and complete your registration");
 
@@ -21,7 +21,7 @@ namespace Solen.Persistence.Data.NotificationTemplates
             stringBuilder.Append("<br/> <br/>");
             stringBuilder.Append("{{ data.link_to_complete_signing_up }}");
             stringBuilder.Append("<br/> <br/>");
-            
+
             template.UpdateTemplateBody(stringBuilder.ToString());
 
             return template;

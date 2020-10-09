@@ -2,10 +2,11 @@
 {
     public class ArticleLecture : LectureType
     {
-        public override bool IsMediaLecture => false;
+        public static readonly ArticleLecture Instance = new ArticleLecture();
 
         public ArticleLecture() : base(1, "Article")
         {
         }
+        public override bool IsMediaLecture => false;
     }
 }

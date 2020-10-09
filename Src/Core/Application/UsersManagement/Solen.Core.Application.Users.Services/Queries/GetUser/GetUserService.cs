@@ -41,7 +41,7 @@ namespace Solen.Core.Application.Users.Services.Queries
                 LearningPathId = user.LearningPath?.Id,
                 RolesIds = user.UserRoles.Select(ur => ur.RoleId),
                 Status = user.UserStatusName,
-                IsBlocked = user.UserStatusName == new BlockedStatus().Name,
+                IsBlocked = user.UserStatusName == BlockedStatus.Instance.Name,
                 UserName = user.UserName
             };
         }

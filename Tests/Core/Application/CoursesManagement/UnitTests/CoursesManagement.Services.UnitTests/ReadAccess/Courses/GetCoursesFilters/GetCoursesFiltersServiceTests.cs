@@ -67,7 +67,7 @@ namespace CoursesManagement.Services.UnitTests.ReadAccess.Courses.GetCoursesFilt
         {
             var result = _sut.GetOrderByDefaultValue();
 
-            Assert.That(result, Is.EqualTo(new OrderByCreationDateDesc().Value));
+            Assert.That(result, Is.EqualTo(OrderByCreationDateDesc.Instance.Value));
         }
 
         [Test]

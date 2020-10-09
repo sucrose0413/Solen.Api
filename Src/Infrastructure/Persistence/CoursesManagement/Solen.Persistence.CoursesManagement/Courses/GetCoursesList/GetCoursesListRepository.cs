@@ -81,10 +81,10 @@ namespace Solen.Persistence.CoursesManagement.Courses
 
             var columnsMap = new Dictionary<int, Expression<Func<Course, object>>>
             {
-                [new OrderByAuthor().Value] = c => c.Creator.UserName,
-                [new OrderByAuthorDesc().Value] = c => c.Creator.UserName,
-                [new OrderByCreationDate().Value] = c => c.CreationDate,
-                [new OrderByCreationDateDesc().Value] = c => c.CreationDate
+                [OrderByAuthor.Instance.Value] = c => c.Creator.UserName,
+                [OrderByAuthorDesc.Instance.Value] = c => c.Creator.UserName,
+                [OrderByCreationDate.Instance.Value] = c => c.CreationDate,
+                [OrderByCreationDateDesc.Instance.Value] = c => c.CreationDate
             };
 
             query = query.ApplyOrdering(coursesQuery, columnsMap, isSortDescending);

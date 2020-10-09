@@ -14,8 +14,8 @@ namespace Domain.UnitTests.Notifications.Entities
         [Test]
         public void ConstructorWithNotificationTypeNotificationEvent_WhenCalled_SetPropertiesCorrectly()
         {
-            var @event = new CoursePublishedEvent();
-            var notificationType = new EmailNotification();
+            var @event = CoursePublishedEvent.Instance;
+            var notificationType = EmailNotification.Instance;
 
             _sut = new NotificationTemplate(notificationType, @event, isSystemNotification: true);
 
@@ -27,7 +27,7 @@ namespace Domain.UnitTests.Notifications.Entities
         [Test]
         public void UpdateTemplateSubject_WhenCalled_UpdateTemplateSubject()
         {
-            _sut = new NotificationTemplate(new EmailNotification(), new CoursePublishedEvent(),
+            _sut = new NotificationTemplate(EmailNotification.Instance, CoursePublishedEvent.Instance,
                 isSystemNotification: true);
 
             _sut.UpdateTemplateSubject("new subject");
@@ -38,7 +38,7 @@ namespace Domain.UnitTests.Notifications.Entities
         [Test]
         public void UpdateTemplateBody_WhenCalled_UpdateTemplateBody()
         {
-            _sut = new NotificationTemplate(new EmailNotification(), new CoursePublishedEvent(),
+            _sut = new NotificationTemplate(EmailNotification.Instance, CoursePublishedEvent.Instance,
                 isSystemNotification: true);
 
             _sut.UpdateTemplateBody("new body");

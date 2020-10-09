@@ -32,7 +32,7 @@ namespace Solen.Core.Application.LearningPaths.Services.Queries
                 return new LearnerCompletedCoursesDto();
 
             var completedCourses = new List<string>();
-            var publishedStatus = new PublishedStatus().Name;
+            var publishedStatus = PublishedStatus.Instance.Name;
             var courses = await _repo.GetLearningPathPublishedCourses(learner.LearningPathId, publishedStatus, token);
             foreach (var course in courses)
             {

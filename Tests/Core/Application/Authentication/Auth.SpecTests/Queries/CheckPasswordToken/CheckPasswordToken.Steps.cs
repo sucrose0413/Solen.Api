@@ -72,7 +72,7 @@ namespace Auth.SpecTests.Queries.CheckPasswordToken
             _factory.CreateOrganization(organization);
 
             var user = new User("email", organization.Id);
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
             user.SetPasswordToken("passwordToken");
             _factory.CreateUser(user);
 

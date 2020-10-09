@@ -31,7 +31,7 @@ namespace Domain.UnitTests.Courses.Entities
             Assert.That(_sut.Title, Is.EqualTo("title"));
             Assert.That(_sut.CreatorId, Is.EqualTo("creatorId"));
             Assert.That(_sut.CreationDate, Is.EqualTo(now));
-            Assert.That(_sut.CourseStatusName, Is.EqualTo(new DraftStatus().Name));
+            Assert.That(_sut.CourseStatusName, Is.EqualTo(DraftStatus.Instance.Name));
         }
 
         [Test]
@@ -71,7 +71,7 @@ namespace Domain.UnitTests.Courses.Entities
         [Test]
         public void ChangeCourseStatus_WhenCalled_UpdateCourseStatus()
         {
-            var publishedStatus = new PublishedStatus();
+            var publishedStatus = PublishedStatus.Instance;
             
             _sut.ChangeCourseStatus(publishedStatus);
 
@@ -102,7 +102,7 @@ namespace Domain.UnitTests.Courses.Entities
         [Test]
         public void IsEditable_CourseStatusIsDraft_ReturnTrue()
         {
-            _sut.ChangeCourseStatus(new DraftStatus());
+            _sut.ChangeCourseStatus(DraftStatus.Instance);
             
             var result = _sut.IsEditable;
 
@@ -112,7 +112,7 @@ namespace Domain.UnitTests.Courses.Entities
         [Test]
         public void IsEditable_CourseStatusIsUnpublished_ReturnTrue()
         {
-            _sut.ChangeCourseStatus(new UnpublishedStatus());
+            _sut.ChangeCourseStatus(UnpublishedStatus.Instance);
             
             var result = _sut.IsEditable;
 
@@ -122,7 +122,7 @@ namespace Domain.UnitTests.Courses.Entities
         [Test]
         public void IsEditable_CourseStatusIsPublished_ReturnFalse()
         {
-            _sut.ChangeCourseStatus(new PublishedStatus());
+            _sut.ChangeCourseStatus(PublishedStatus.Instance);
             
             var result = _sut.IsEditable;
 

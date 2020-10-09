@@ -21,7 +21,7 @@ namespace Solen.Core.Application.SigningUp.EventsHandlers.Users
             var recipient = new RecipientContactInfo(null, @event.User.Email);
             var userInfo = new UserInfo(@event.User.UserName);
 
-            await _notificationHandler.Handle(recipient, new UserSigningUpCompletedEvent(), userInfo);
+            await _notificationHandler.Handle(recipient, UserSigningUpCompletedEvent.Instance, userInfo);
         }
     }
 }
