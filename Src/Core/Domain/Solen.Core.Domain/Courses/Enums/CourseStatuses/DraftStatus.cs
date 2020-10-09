@@ -3,7 +3,7 @@
     public class DraftStatus : CourseStatus
     {
         public static readonly DraftStatus Instance = new DraftStatus();
-        private DraftStatus() : base(1, "Draft")
+        public DraftStatus() : base(1, "Draft")
         {
         }
     }

@@ -4,7 +4,7 @@
     {
         public static readonly ArticleLecture Instance = new ArticleLecture();
 
-        private ArticleLecture() : base(1, "Article")
+        public ArticleLecture() : base(1, "Article")
         {
         }
         public override bool IsMediaLecture => false;

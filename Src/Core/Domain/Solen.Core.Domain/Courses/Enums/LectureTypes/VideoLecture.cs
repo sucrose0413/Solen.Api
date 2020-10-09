@@ -4,7 +4,7 @@
     {
         public static readonly VideoLecture Instance = new VideoLecture();
         
-        private VideoLecture() : base(2, "Video")
+        public VideoLecture() : base(2, "Video")
         {
         }
         
