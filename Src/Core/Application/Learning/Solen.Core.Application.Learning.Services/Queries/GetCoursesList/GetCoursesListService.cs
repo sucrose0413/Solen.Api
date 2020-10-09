@@ -21,7 +21,7 @@ namespace Solen.Core.Application.Learning.Services.Queries
             CancellationToken token)
         {
             if (coursesQuery.OrderBy == 0)
-                coursesQuery.OrderBy = new OrderByLastAccessed().Value;
+                coursesQuery.OrderBy = OrderByLastAccessed.Instance.Value;
 
             return await _repo.GetCoursesList(coursesQuery, _currentUserAccessor.UserId,
                 _currentUserAccessor.LearningPathId, PublishedStatus.Instance.Name, token);
