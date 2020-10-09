@@ -36,7 +36,7 @@ namespace CoursesManagement.UnitTests.Lectures.Commands.UploadMedia
             _commonService.Setup(x => x.GetLectureFromRepo(_command.LectureId, default))
                 .ReturnsAsync(_mediaLectureToUpdate);
 
-            _mediaResource = new ResourceToCreate(_command.File, new VideoType());
+            _mediaResource = new ResourceToCreate(_command.File, VideoType.Instance);
             _lecturesService.Setup(x => x.GenerateMediaResource(_command.File))
                 .Returns(_mediaResource);
             _uploadedResource = new ResourceUploadResult("resourceId", "resourceUrl");

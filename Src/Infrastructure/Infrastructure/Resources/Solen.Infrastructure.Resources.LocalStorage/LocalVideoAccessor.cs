@@ -10,7 +10,7 @@ namespace Solen.Infrastructure.Resources.LocalStorage
         {
         }
 
-        public override ResourceType ResourceType => new VideoType();
+        public override ResourceType ResourceType => VideoType.Instance;
 
         #region Private Methods
 

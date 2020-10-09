@@ -134,7 +134,7 @@ namespace CoursesManagement.Services.UnitTests.EditMode.Lectures
             var result = _sut.GenerateMediaResource(file.Object);
 
             Assert.That(result.File, Is.EqualTo(file.Object));
-            Assert.That(result.ResourceType.Name, Is.EqualTo(new VideoType().Name));
+            Assert.That(result.ResourceType.Name, Is.EqualTo(VideoType.Instance.Name));
         }
 
         [Test]
@@ -142,7 +142,7 @@ namespace CoursesManagement.Services.UnitTests.EditMode.Lectures
         {
             // Arrange
             var file = new Mock<IResourceFile>();
-            var resourceToCreate = new ResourceToCreate(file.Object, new VideoType());
+            var resourceToCreate = new ResourceToCreate(file.Object, VideoType.Instance);
             var uploadResult = new ResourceUploadResult("resourceId", "resourceUrl");
             _appResourceManager.Setup(x => x.UploadResource(resourceToCreate))
                 .Returns(uploadResult);
@@ -159,8 +159,8 @@ namespace CoursesManagement.Services.UnitTests.EditMode.Lectures
         {
             // Arrange
             var file = new Mock<IResourceFile>();
-            var resourceToCreate = new ResourceToCreate(file.Object, new VideoType());
-            var appResource = new AppResource("resourceId", "organizationId", "creator", new VideoType(), 1);
+            var resourceToCreate = new ResourceToCreate(file.Object, VideoType.Instance);
+            var appResource = new AppResource("resourceId", "organizationId", "creator", VideoType.Instance, 1);
             _appResourceManager.Setup(x => x.CreateAppResource("resourceId", resourceToCreate))
                 .Returns(appResource);
 
