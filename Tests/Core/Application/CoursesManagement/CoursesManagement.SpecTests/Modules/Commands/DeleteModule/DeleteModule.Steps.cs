@@ -48,7 +48,7 @@ namespace CoursesManagement.SpecTests.Modules.Commands
             _factory.CreateOrganization(organization);
 
             var instructor = new User("instructor@email.com", organization.Id);
-            instructor.ChangeUserStatus(new ActiveStatus());
+            instructor.ChangeUserStatus(ActiveStatus.Instance);
             instructor.AddRoleId(UserRoles.Instructor);
             _instructorId = instructor.Id;
             _factory.CreateUser(instructor);
@@ -74,7 +74,7 @@ namespace CoursesManagement.SpecTests.Modules.Commands
         public async Task WhenIDeleteAModuleWhileTheCourseIsPublished()
         {
             var course = new Course("course", _instructorId, DateTime.Now);
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             var module = new Module("module", course.Id, 1);

@@ -12,6 +12,6 @@ namespace Solen.Core.Application.CoursesManagement.Edit.Factories.LectureCreatio
             return new Domain.Courses.Entities.ArticleLecture(command.Title, command.ModuleId, command.Order, command.Content);
         }
 
-        public LectureType LectureType => new ArticleLecture();
+        public LectureType LectureType => ArticleLecture.Instance;
     }
 }

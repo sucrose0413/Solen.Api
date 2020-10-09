@@ -12,7 +12,7 @@ namespace Common.Notifications.UnitTests
         [Test]
         public void ConstructorWithSubjectBodyNotificationEvent_WhenCalled_SetRequiredPropertiesCorrectly()
         {
-            var @event = new CoursePublishedEvent();
+            var @event = CoursePublishedEvent.Instance;
                 
             _sut = new NotificationMessage("subject", "body", @event);
 

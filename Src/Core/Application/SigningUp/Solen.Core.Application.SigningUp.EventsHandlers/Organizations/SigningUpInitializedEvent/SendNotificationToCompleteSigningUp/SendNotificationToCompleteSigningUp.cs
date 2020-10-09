@@ -26,7 +26,7 @@ namespace Solen.Core.Application.SigningUp.EventsHandlers.Organizations
             var recipient = new RecipientContactInfo(null, @event.SigningUp.Email);
             var signingUpIfo = new SigningUpInfo(GetLinkToCompleteSigningUp(@event.SigningUp.Token));
 
-            await _notificationHandler.Handle(recipient, new OrganizationSigningUpInitializedEvent(),
+            await _notificationHandler.Handle(recipient, OrganizationSigningUpInitializedEvent.Instance,
                 signingUpIfo);
         }
 

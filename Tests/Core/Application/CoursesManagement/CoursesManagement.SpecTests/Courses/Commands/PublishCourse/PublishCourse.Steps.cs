@@ -48,7 +48,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
             _factory.CreateOrganization(organization);
 
             var instructor = new User("instructor@email.com", organization.Id);
-            instructor.ChangeUserStatus(new ActiveStatus());
+            instructor.ChangeUserStatus(ActiveStatus.Instance);
             instructor.AddRoleId(UserRoles.Instructor);
             _instructorId = instructor.Id;
             _factory.CreateUser(instructor);
@@ -173,7 +173,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
 
             var course = await _factory.GetCourseById(_command.CourseId);
 
-            Assert.That(course.CourseStatus.Name, Is.EqualTo(new PublishedStatus().Name));
+            Assert.That(course.CourseStatus.Name, Is.EqualTo(PublishedStatus.Instance.Name));
         }
         
         [When(@"I publish the course")]

@@ -12,7 +12,7 @@ namespace Domain.UnitTests.Notifications.Entities
         [Test]
         public void ConstructorWithNotificationEventRecipientIdSubjectBody_WhenCalled_SetPropertiesCorrectly()
         {
-            var @event = new CoursePublishedEvent();
+            var @event = CoursePublishedEvent.Instance;
             
             _sut = new Notification(@event, "recipientId", "subject", "body");
 
@@ -28,7 +28,7 @@ namespace Domain.UnitTests.Notifications.Entities
         [Test]
         public void MarkAsRead_WhenCalled_MarkNotificationAsRead()
         {
-            _sut = new Notification(new CoursePublishedEvent(), "recipientId", "subject", "body");
+            _sut = new Notification(CoursePublishedEvent.Instance, "recipientId", "subject", "body");
 
             _sut.MarkAsRead();
 

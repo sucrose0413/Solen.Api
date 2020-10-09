@@ -54,7 +54,7 @@ namespace Application.Learning.Services.UnitTests.Queries.GetCoursesFilters
         {
             var result = _sut.GetOrderByDefaultValue();
 
-            Assert.That(result, Is.EqualTo(new OrderByLastAccessed().Value));
+            Assert.That(result, Is.EqualTo(OrderByLastAccessed.Instance.Value));
         }
     }
 }

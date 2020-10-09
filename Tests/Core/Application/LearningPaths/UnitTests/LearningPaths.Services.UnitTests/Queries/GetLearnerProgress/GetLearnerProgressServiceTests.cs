@@ -17,7 +17,7 @@ namespace LearningPaths.Services.UnitTests.Queries.GetLearnerProgress
         private Mock<IUserManager> _userManager;
         private GetLearnerProgressService _sut;
         
-        private readonly string _publishedStatus = new PublishedStatus().Name;
+        private readonly string _publishedStatus = PublishedStatus.Instance.Name;
 
         [SetUp]
         public void SetUp()

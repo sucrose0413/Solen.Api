@@ -33,7 +33,7 @@ namespace Common.Resources.UnitTests
                 .Returns("creatorName");
 
             var file = new Mock<IResourceFile>();
-            _resourceToCreate = new ResourceToCreate(file.Object, new VideoType());
+            _resourceToCreate = new ResourceToCreate(file.Object, VideoType.Instance);
         }
 
         [Test]

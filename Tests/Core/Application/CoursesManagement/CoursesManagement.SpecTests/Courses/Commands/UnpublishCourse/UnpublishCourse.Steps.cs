@@ -48,7 +48,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
             _factory.CreateOrganization(organization);
 
             var instructor = new User("instructor@email.com", organization.Id);
-            instructor.ChangeUserStatus(new ActiveStatus());
+            instructor.ChangeUserStatus(ActiveStatus.Instance);
             instructor.AddRoleId(UserRoles.Instructor);
             _instructorId = instructor.Id;
             _factory.CreateUser(instructor);
@@ -88,7 +88,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
             _factory.CreateUser(otherInstructor);
 
             var course = new Course("course", otherInstructor.Id, DateTime.Now);
-            course.ChangeCourseStatus(new UnpublishedStatus());
+            course.ChangeCourseStatus(UnpublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             _command = new UnpublishCourseCommand {CourseId = course.Id};
@@ -105,7 +105,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
         public void GivenAExistingPublishedCourse()
         {
             var course = new Course("course", _instructorId, DateTime.Now.AddDays(-1));
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
             _factory.CreateCourse(course);
 
             _command = new UnpublishCourseCommand {CourseId = course.Id};
@@ -125,7 +125,7 @@ namespace CoursesManagement.SpecTests.Courses.Commands
 
             var course = await _factory.GetCourseById(_command.CourseId);
 
-            Assert.That(course.CourseStatus.Name, Is.EqualTo(new UnpublishedStatus().Name));
+            Assert.That(course.CourseStatus.Name, Is.EqualTo(UnpublishedStatus.Instance.Name));
         }
     }
 }

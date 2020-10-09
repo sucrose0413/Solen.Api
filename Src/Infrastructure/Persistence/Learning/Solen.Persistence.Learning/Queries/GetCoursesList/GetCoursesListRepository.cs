@@ -51,7 +51,7 @@ namespace Solen.Persistence.Learning.Queries
 
         private static bool IsOrderedByLastAccess(int orderBy)
         {
-            return orderBy == new OrderByLastAccessed().Value;
+            return orderBy == OrderByLastAccessed.Instance.Value;
         }
 
         private IQueryable<Course> OrderByLastAccess(string learnerId, string learningPathId, string publishedStatus)

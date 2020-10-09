@@ -8,7 +8,7 @@ namespace Solen.Core.Application.CoursesManagement.Edit.Services.Courses
     {
         public void ChangeTheCourseStatusToUnpublished(Course course)
         {
-            course.ChangeCourseStatus(new UnpublishedStatus());
+            course.ChangeCourseStatus(UnpublishedStatus.Instance);
         }
     }
 }

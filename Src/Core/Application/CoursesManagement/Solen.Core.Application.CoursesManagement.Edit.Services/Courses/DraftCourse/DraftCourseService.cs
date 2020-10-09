@@ -8,7 +8,7 @@ namespace Solen.Core.Application.CoursesManagement.Edit.Services.Courses
     {
         public void ChangeTheCourseStatusToDraft(Course course)
         {
-            course.ChangeCourseStatus(new DraftStatus());
+            course.ChangeCourseStatus(DraftStatus.Instance);
         }
     }
 }

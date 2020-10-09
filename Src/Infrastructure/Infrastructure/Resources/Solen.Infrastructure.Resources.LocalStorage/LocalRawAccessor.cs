@@ -11,7 +11,7 @@ namespace Solen.Infrastructure.Resources.LocalStorage
         }
 
 
-        public override ResourceType ResourceType => new RawType();
+        public override ResourceType ResourceType => RawType.Instance;
 
         #region Private Methods
 

@@ -44,7 +44,7 @@ namespace Solen.Core.Application.CoursesManagement.Edit.Services.Courses
 
         public void ChangeTheCourseStatusToPublished(Course course)
         {
-            course.ChangeCourseStatus(new PublishedStatus());
+            course.ChangeCourseStatus(PublishedStatus.Instance);
         }
 
         public void UpdatePublicationDate(Course course)

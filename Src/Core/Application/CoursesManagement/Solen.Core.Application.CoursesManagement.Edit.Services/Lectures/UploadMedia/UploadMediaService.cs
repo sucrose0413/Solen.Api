@@ -52,7 +52,7 @@ namespace Solen.Core.Application.CoursesManagement.Edit.Services.Lectures
 
         public ResourceToCreate GenerateMediaResource(IResourceFile file)
         {
-            return new ResourceToCreate(file, new VideoType());
+            return new ResourceToCreate(file, VideoType.Instance);
         }
 
         public ResourceUploadResult UploadResource(ResourceToCreate resourceToCreate)

@@ -35,7 +35,7 @@ namespace Common.Notifications.UnitTests
                 _currentUserAccessor.Object);
 
 
-            _event = new CoursePublishedEvent();
+            _event = CoursePublishedEvent.Instance;
             _currentUserAccessor.Setup(x => x.OrganizationId).Returns("organizationId");
         }
 
@@ -47,7 +47,7 @@ namespace Common.Notifications.UnitTests
             _repo.Setup(x => x.GetDisabledNotifications("organizationId"))
                 .Returns(excludedTemplatesId);
             var templates = new List<NotificationTemplate>
-                {new NotificationTemplate(new EmailNotification(), _event, false)};
+                {new NotificationTemplate(EmailNotification.Instance, _event, false)};
             _repo.Setup(x => x.GetNotificationTemplatesByNotificationEvent(_event, excludedTemplatesId))
                 .Returns(templates);
             var messageToSend = new NotificationMessage("subject", "body", _event);

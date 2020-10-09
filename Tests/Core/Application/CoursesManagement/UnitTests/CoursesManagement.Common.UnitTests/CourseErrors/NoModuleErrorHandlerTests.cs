@@ -26,7 +26,7 @@ namespace CoursesManagement.Common.UnitTests
 
             var result = _sut.GetCourseErrors("courseId", default).Result;
 
-            Assert.That(result.Count(p => p.Error.Contains(new NoModuleError().Name)),
+            Assert.That(result.Count(p => p.Error.Contains(NoModuleError.Instance.Name)),
                 Is.EqualTo(1));
         }
 
@@ -38,7 +38,7 @@ namespace CoursesManagement.Common.UnitTests
 
             var result = _sut.GetCourseErrors("courseId", default).Result;
 
-            Assert.That(result.Count(p => p.Error.Contains(new NoModuleError().Name)),
+            Assert.That(result.Count(p => p.Error.Contains(NoModuleError.Instance.Name)),
                 Is.EqualTo(0));
         }
     }

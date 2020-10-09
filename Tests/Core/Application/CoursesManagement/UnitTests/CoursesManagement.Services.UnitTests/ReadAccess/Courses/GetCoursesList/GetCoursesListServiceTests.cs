@@ -31,7 +31,7 @@ namespace CoursesManagement.Services.UnitTests.ReadAccess.Courses
 
             _sut.GetCoursesList(query, default).Wait();
 
-            Assert.That(query.OrderBy, Is.EqualTo(new OrderByCreationDateDesc().Value));
+            Assert.That(query.OrderBy, Is.EqualTo(OrderByCreationDateDesc.Instance.Value));
         }
 
         [Test]

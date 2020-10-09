@@ -9,8 +9,8 @@ namespace Solen.Persistence.Data.NotificationTemplates
     {
         public static NotificationTemplate Create()
         {
-            var template = new NotificationTemplate(new EmailNotification(),
-                new UserSigningUpInitializedEvent(), isSystemNotification: true);
+            var template = new NotificationTemplate(EmailNotification.Instance,
+                UserSigningUpInitializedEvent.Instance, isSystemNotification: true);
 
             template.UpdateTemplateSubject("{{data.invited_by}} has invited you to join Solen LMS");
 
