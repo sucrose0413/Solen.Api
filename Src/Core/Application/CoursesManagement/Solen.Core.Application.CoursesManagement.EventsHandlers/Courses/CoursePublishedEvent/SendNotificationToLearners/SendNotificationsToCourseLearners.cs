@@ -26,7 +26,7 @@ namespace Solen.Core.Application.CoursesManagement.EventsHandlers.Courses
             var learners = await _repo.GetCourseLearners(@event.CourseId, token);
 
             foreach (var learner in learners)
-                await _notificationHandler.Handle(learner, new CoursePublishedEvent(), courseInfo);
+                await _notificationHandler.Handle(learner, CoursePublishedEvent.Instance, courseInfo);
         }
     }
 }

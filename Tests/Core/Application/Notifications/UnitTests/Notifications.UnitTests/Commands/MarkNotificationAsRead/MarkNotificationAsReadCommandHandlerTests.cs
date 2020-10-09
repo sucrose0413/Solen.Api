@@ -27,7 +27,7 @@ namespace Notifications.UnitTests.Commands.MarkNotificationAsRead
 
             _command = new MarkNotificationAsReadCommand {NotificationId = "notificationId"};
 
-            _notification = new Notification(new CoursePublishedEvent(), "recipient", "subject", "body");
+            _notification = new Notification(CoursePublishedEvent.Instance, "recipient", "subject", "body");
             _service.Setup(x => x.GetNotification("notificationId", default))
                 .ReturnsAsync(_notification);
         }

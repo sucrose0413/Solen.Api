@@ -9,8 +9,8 @@ namespace Solen.Persistence.Data.NotificationTemplates
     {
         public static NotificationTemplate Create()
         {
-            var template = new NotificationTemplate(new EmailNotification(),
-                new PasswordForgottenEvent(), isSystemNotification: true);
+            var template = new NotificationTemplate(EmailNotification.Instance,
+                PasswordForgottenEvent.Instance, isSystemNotification: true);
 
             template.UpdateTemplateSubject("Reset Password");
 

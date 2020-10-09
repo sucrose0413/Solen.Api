@@ -9,8 +9,8 @@ namespace Solen.Persistence.Data.NotificationTemplates
     {
         public static NotificationTemplate Create()
         {
-            var template = new NotificationTemplate(new PushNotification(), 
-                new CoursePublishedEvent(), isSystemNotification: false);
+            var template = new NotificationTemplate(PushNotification.Instance, 
+                CoursePublishedEvent.Instance, isSystemNotification: false);
 
             template.UpdateTemplateSubject("A course has been published !");
 

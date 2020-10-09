@@ -20,6 +20,6 @@ namespace Solen.Infrastructure.Notifications.Emailing
             await _emailSender.SendEmailAsync(email);
         }
 
-        public NotificationType NotificationType => new EmailNotification();
+        public NotificationType NotificationType => EmailNotification.Instance;
     }
 }
