@@ -27,7 +27,7 @@ namespace Domain.UnitTests.Identity.Entities
             Assert.That(_sut.Email, Is.EqualTo("user@email.com"));
             Assert.That(_sut.OrganizationId, Is.EqualTo("organizationId"));
             Assert.That(_sut.CreationDate, Is.Not.Null);
-            Assert.That(_sut.UserStatusName, Is.EqualTo(new PendingStatus().Name));
+            Assert.That(_sut.UserStatusName, Is.EqualTo(PendingStatus.Instance.Name));
         }
 
 
@@ -115,7 +115,7 @@ namespace Domain.UnitTests.Identity.Entities
         [Test]
         public void ChangeUserStatus_WhenCalled_UpdateUserStatus()
         {
-            var activeStatus = new ActiveStatus();
+            var activeStatus = ActiveStatus.Instance;
             
             _sut.ChangeUserStatus(activeStatus);
 

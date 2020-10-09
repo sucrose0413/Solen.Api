@@ -56,7 +56,7 @@ namespace Solen.Core.Application.Common.Identity.Impl
 
         public void ValidateUserInscription(User user)
         {
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
             user.InitInvitationToken();
         }
 
@@ -109,7 +109,7 @@ namespace Solen.Core.Application.Common.Identity.Impl
 
         public bool IsActiveUser(User user)
         {
-            return user != null && user.UserStatus.Name == new ActiveStatus().Name;
+            return user != null && user.UserStatus.Name == ActiveStatus.Instance.Name;
         }
 
 

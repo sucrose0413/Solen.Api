@@ -73,7 +73,7 @@ namespace Common.Identity.UnitTests
 
             _sut.ValidateUserInscription(user.Object);
 
-            user.Verify(x => x.ChangeUserStatus(new ActiveStatus()));
+            user.Verify(x => x.ChangeUserStatus(ActiveStatus.Instance));
         }
 
         [Test]
@@ -259,7 +259,7 @@ namespace Common.Identity.UnitTests
         public void IsActiveUser_UserIsActive_ReturnTrue()
         {
             var user = new User("email", "organizationId");
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
 
             var result = _sut.IsActiveUser(user);
 

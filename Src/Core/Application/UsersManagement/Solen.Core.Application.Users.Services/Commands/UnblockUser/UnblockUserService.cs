@@ -25,7 +25,7 @@ namespace Solen.Core.Application.Users.Services.Commands
 
         public void UnblockUser(User user)
         {
-            user.ChangeUserStatus(new ActiveStatus());
+            user.ChangeUserStatus(ActiveStatus.Instance);
         }
 
         public void UpdateUser(User user)

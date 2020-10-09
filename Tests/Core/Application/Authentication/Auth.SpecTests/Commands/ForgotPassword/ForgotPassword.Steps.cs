@@ -73,7 +73,7 @@ namespace Auth.SpecTests.Commands
             _factory.CreateOrganization(organization);
 
             _user = new User("user@email.com", organization.Id);
-            _user.ChangeUserStatus(new BlockedStatus());
+            _user.ChangeUserStatus(BlockedStatus.Instance);;
             _factory.CreateUser(_user);
         }
 
@@ -98,7 +98,7 @@ namespace Auth.SpecTests.Commands
             _factory.CreateOrganization(organization);
 
             _user = new User("user@email.com", organization.Id);
-            _user.ChangeUserStatus(new ActiveStatus());
+            _user.ChangeUserStatus(ActiveStatus.Instance);
             _factory.CreateUser(_user);
         }
 
