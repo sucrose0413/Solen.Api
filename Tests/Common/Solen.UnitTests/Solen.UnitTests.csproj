@@ -9,7 +9,7 @@
     </PropertyGroup>
 
     <ItemGroup>
-        <PackageReference Include="Moq" Version="4.15.1" />
+        <PackageReference Include="Moq" Version="4.15.2" />
         <PackageReference Include="Moq.Sequences" Version="2.2.1" />
     </ItemGroup>
 
