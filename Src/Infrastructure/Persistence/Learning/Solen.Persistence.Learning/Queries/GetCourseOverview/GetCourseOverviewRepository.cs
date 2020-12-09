@@ -60,7 +60,7 @@ namespace Solen.Persistence.Learning.Queries
                 Name = x.Name,
                 Order = x.Order,
                 Duration = x.Lectures.Sum(l => l.Duration),
-                Lectures = x.Lectures.OrderBy(l =>l.Order).AsQueryable().Select(LectureMapping())
+                Lectures = x.Lectures.OrderBy(l =>l.Order).AsQueryable().Select(LectureMapping()).ToList()
             };
         }
 
@@ -72,9 +72,9 @@ namespace Solen.Persistence.Learning.Queries
                 Title = x.Title,
                 Duration = x.Modules.SelectMany(m => m.Lectures).Sum(l => l.Duration),
                 Creator = x.Creator.UserName,
-                Modules = x.Modules.OrderBy(m => m.Order).AsQueryable().Select(ModuleMapping()),
+                Modules = x.Modules.OrderBy(m => m.Order).AsQueryable().Select(ModuleMapping()).ToList(),
                 CreationDate = x.CreationDate,
-                CourseLearnedSkills = x.CourseLearnedSkills.AsQueryable().Select(LearnedSkillMapping()),
+                CourseLearnedSkills = x.CourseLearnedSkills.AsQueryable().Select(LearnedSkillMapping()).ToList(),
                 Subtitle = x.Subtitle,
                 Description = x.Description,
                 LectureCount = x.Modules.SelectMany(m => m.Lectures).Count()
