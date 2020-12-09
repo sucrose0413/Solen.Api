@@ -12,7 +12,7 @@ namespace Solen.DependencyInjection.Infrastructure
         public static IServiceCollection AddPersistence(this IServiceCollection services, IConfiguration configuration)
         {
             // Db context
-            services.AddDbContext<SolenDbContext>(x => x.UseMySql(configuration.GetConnectionString("Default")));
+            services.AddDbContext<SolenDbContext>(x => x.UseMySql(configuration.GetConnectionString("Default"), new MySqlServerVersion(new System.Version(8, 0, 19))));
 
             // Unit of Work
             services.AddScoped<IUnitOfWork, UnitOfWork>();
